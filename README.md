@@ -16,8 +16,14 @@ LPRNet coding is heavily followed by [sirius-ai](https://github.com/sirius-ai/LP
 |   accuracy %      | 99.1     |  96.3 | 97.3 | 95.1 | 96.4 | 97.1 | 83.2 |
 
 ## Training on MTCNN
-* Download the [CCPD](https://github.com/detectRecog/CCPD) data and put it into 'ccpd' folder
-* run 'MTCNN/data_set/preprocess.py' to split training data and validation data and put in "ccpd_train" and "ccpd_val" folders respectively.
+* 下载[CCPD](https://github.com/detectRecog/CCPD)数据集放入至'ccpd'文件中，解压至当前文件夹，并将'CCPD2019'改名为'ccpd_dataset'
+* 进入文件夹 'cd MTCNN/data_set/' 运行''python preprocess.py' 分割为训练结果集和验证结果集分布放入 "ccpd_train" 和 "ccpd_val"文件夹中，如"ccpd_train" 和 "ccpd_val"文件夹文件夹不存在请事先手动创建或修改原代码将在22行附件新增以下代码自动创建
+'''python
+if not os.path.exists(args.dir_train):
+    os.mkdir(args.dir_train)
+if not os.path.exists(args.dir_val):
+    os.mkdir(args.dir_val)
+'''
 * run 'MTCNN/data_preprocessing/gen_Pnet_train_data.py', 'MTCNN/data_preprocessing/gen_Onet_train_data.py','MTCNN/data_preprocessing/assemble_Pnet_imglist.py', 'MTCNN/data_preprocessing/assemble_Onet_imglist.py' for training data preparation.
 * run 'MTCNN/train/Train_Pnet.py' and 'MTCNN/train/Train_Onet.py
 
