@@ -15,10 +15,19 @@ LPRNet coding is heavily followed by [sirius-ai](https://github.com/sirius-ai/LP
 |  :------:     | :---------: | :---------: |:---------: |:---------: |:---------: |:---------: |:---------: |
 |   accuracy %      | 99.1     |  96.3 | 97.3 | 95.1 | 96.4 | 97.1 | 83.2 |
 
+## 依赖
+* pip install imutils
+* pip install opencv-python==3.4.5.20 -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
+* pip install opencv-contrib-python==3.4.5.20 -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
+* pip install torchvision==0.2.2 -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
+* pip install torch==1.0.1 -i http://pypi.douban.com/simple --trusted-host pypi.douban.com
+
+
 ## Training on MTCNN
 * 下载[CCPD](https://github.com/detectRecog/CCPD)数据集放入至'ccpd'文件中，解压至当前文件夹，并将'CCPD2019'改名为'ccpd_dataset'
 * 进入文件夹 'cd MTCNN/data_set/' 运行''python preprocess.py' 分割为训练结果集和验证结果集分布放入 "ccpd_train" 和 "ccpd_val"文件夹中，如"ccpd_train" 和 "ccpd_val"文件夹文件夹不存在请事先手动创建或修改原代码将在22行附件新增以下代码自动创建
-'''python
+
+'''
 if not os.path.exists(args.dir_train):
     os.mkdir(args.dir_train)
 if not os.path.exists(args.dir_val):
