@@ -37,11 +37,13 @@ LPRNet coding is heavily followed by [sirius-ai](https://github.com/sirius-ai/LP
 * 进入文件夹 'cd MTCNN/data_preprocessing/' 修改opt = 'train' 运行'python gen_Pnet_train_data.py'生成Pnet训练数据集
 * 进入文件夹 'cd MTCNN/data_preprocessing/' 修改opt = 'val' 运行'python gen_Pnet_train_data.py'生成Pnet验证数据集
 * 进入文件夹 'cd MTCNN/data_preprocessing/' 修改opt = 'train' 运行'python assemble_Pnet_imglist.py'合并Pnet训练数据集
+* 进入文件夹 'cd MTCNN/data_preprocessing/' 修改opt = 'val' 运行'python assemble_Pnet_imglist.py'合并Pnet验证数据集
 * 进入文件夹 'cd MTCNN/train/' 运行'python Train_Pnet.py'训练Pnet模型
 
 * 进入文件夹 'cd MTCNN/data_preprocessing/' 修改opt = 'train' 运行'python gen_Onet_train_data.py'生成Onet训练数据集
 * 进入文件夹 'cd MTCNN/data_preprocessing/' 修改opt = 'val' 运行'python gen_Onet_train_data.py'生成Onet验证数据集
 * 进入文件夹 'cd MTCNN/data_preprocessing/' 修改opt = 'train' 运行'python assemble_Onet_imglist.py'合并Onet训练数据集
+* 进入文件夹 'cd MTCNN/data_preprocessing/' 修改opt = 'val' 运行'python assemble_Onet_imglist.py'合并Onet验证数据集
 * 进入文件夹 'cd MTCNN/train/' 运行'python Train_Onet.py'训练Onet模型
 
 ## Training on LPRNet
